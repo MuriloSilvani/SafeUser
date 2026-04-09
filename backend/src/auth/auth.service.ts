@@ -7,7 +7,7 @@ interface JwtPayload {
   sub: number;
 }
 
-interface LoginResponse {
+export interface LoginResponse {
   access_token: string;
 }
 

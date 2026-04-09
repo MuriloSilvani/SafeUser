@@ -12,7 +12,7 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { ChangePasswordDto } from './dto/change-password.dto';
-import { AuthenticatedRequest } from '../types';
+import type { AuthenticatedRequest } from '../types';
 
 @Controller('users')
 export class UserController {

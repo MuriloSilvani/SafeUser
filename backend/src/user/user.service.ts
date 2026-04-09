@@ -78,7 +78,15 @@ export class UserService {
   }
 
   // Decrypt data for response
-  getUserData(user: User): Partial<User & { password?: undefined }> {
+  getUserData(user: User): {
+    id: number;
+    name: string;
+    email: string;
+    cpf: string | null;
+    phone: string | null;
+    createdAt: Date;
+    updatedAt: Date;
+  } {
     const data = { ...user };
     if (data.cpf) data.cpf = user.getDecryptedData(data.cpf);
     if (data.phone) data.phone = user.getDecryptedData(data.phone);
